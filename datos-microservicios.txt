@@ -1,0 +1,29 @@
+#
+# Servicio de Productos
+#
+name=servicio-productos
+port=8081
+
+#
+# Servicio de Items
+#
+name=servicio-items
+port=8082
+
+#
+# Servicio eureka server
+#
+name=servicio-eureka-server
+port=8761
+
+#
+# Servicio zuul server (Gateway)
+#
+name=servicio-zuul-server
+port=8090
+
+#
+# Servicio zuul server (Gateway)
+#
+name=servicio-config-server
+port=8888
