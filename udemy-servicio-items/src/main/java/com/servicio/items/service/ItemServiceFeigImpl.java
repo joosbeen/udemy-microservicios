@@ -31,5 +31,23 @@ public class ItemServiceFeigImpl implements ItemService {
 		log.info("Servicio invocado!");
 		return new Item(cantidad, (Producto) this.clienteFeig.findById(id));
 	}
+
+	@Override
+	public Producto create(Producto p) {
+				
+		return this.clienteFeig.save(p).getBody();
+	}
+
+	@Override
+	public Producto update(Producto p) {
+
+		return this.clienteFeig.save(p).getBody();
+	}
+
+	@Override
+	public void deleteById(Long id) {
+		
+		this.clienteFeig.delete(id);
+	}
  
 }

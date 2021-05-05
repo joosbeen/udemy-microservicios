@@ -51,6 +51,13 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
+		
+		<!-- Dependencia del proyecto commons para pojos -->
+		<dependency>
+			<groupId>com.servicio.commons</groupId>
+			<artifactId>udemy-servicio-commons</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>

@@ -27,3 +27,10 @@ port=8090
 #
 name=servicio-config-server
 port=8888
+
+
+#
+# Servicio usuario para autenticacion
+#
+spring.application.name=servicio-usuarios
+server.port=${POST:0}
