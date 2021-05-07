@@ -13,7 +13,7 @@ import com.servicio.usuarios.entity.Usuario;
 public interface UsuarioRepository extends PagingAndSortingRepository<Usuario, Long>{
 	
 	@RestResource(path = "buscar-username")
-	Usuario findByUsername(@Param("nombre") String username);
+	Usuario findByUsername(@Param("username") String username);
 	
 	@Query("select u from Usuario u where u.username=?1")
 	Usuario obtenerPorUsername(String username);
