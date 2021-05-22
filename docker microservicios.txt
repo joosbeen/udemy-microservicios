@@ -27,9 +27,14 @@
 
 	docker run -p 5432:5432 --name servicio-postgres --network springcloud -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=udemy_microservicio postgres:12-alpine
 
--- Postgres 
+-- Servicio producto
 
 	Crear archivo Dockerfile
 
-	mvnw clean package -DskipTests
+	.\mvnw clean package -DskipTests
+
+	docker build -t servicio-productos:v1 .
+
+	#  -P Mayuscula.
+	docker run -P --network springcloud servicio-productos:v1
 
