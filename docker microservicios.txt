@@ -1,0 +1,29 @@
+
+-- Crear Red para enlasar contenedores
+
+	docker network create springcloud
+
+-- Config Server
+
+	Crear archivo Dockerfile
+
+		docker run -p 8888:8888 --name config-server --network springcloud config-server:v1
+
+-- Config Eureka
+
+	Crear archivo Dockerfile
+
+		docker run -p 8761:8761 --name servicio-eureka-server --network springcloud eureka-server:v1
+
+-- MySQL 
+	
+	docker pull mysql:8
+
+	docker run -p 3306:3306 --name servicio-mysql --network springcloud -e MYSQL_ROOT_PASSWORD=r00t -e MYSQL_DATABASE=udemy_microservicio mysql:8
+	
+-- Postgres 
+	
+	docker pull postgres:12-alpine
+
+	docker run -p 5432:5432 --name servicio-postgres --network springcloud -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=udemy_microservicio postgres:12-alpine
+
