@@ -68,14 +68,16 @@
 
 	docker run -p 9100:9100 --network springcloud servicio-oauth:v1
 
+-- Servicio Items
 
+	Crear archivo Dockerfile
 
+	.\mvnw clean package -DskipTests
 
+	docker build -t servicio-items:v1 .
 
-$2a$10$Zny9nkoa1zaCk1kCG.ddueRTIKXs6qiQhx2pmIjzkgPGZIVjc3y2W
-$2a$10$eUtqmKM1fDyl7Z63jC/YGe4CuTi97I6pmm9iLSHipACmb5sbjdjxa
-$2a$10$3cs.jdV8KxqkNT6Yefm20.ZI/fsn0UCqh4I04eJJHJiwYZqL.E.sy
-$2a$10$TNoUNyLRRC1rqcW.bOm6T.wjHbOxEfYxSUPO9fJVzT5PKS/Av1ERe
+	docker run -p 9100:9100 --network springcloud servicio-items:v1
+
 
 INSERT INTO usuarios("email", "enabled", "intentos", "nombre", "password", "username") 
 VALUES ("joosbeen@gmail.com", TRUE, 0, "jose benito", "$2a$10$Zny9nkoa1zaCk1kCG.ddueRTIKXs6qiQhx2pmIjzkgPGZIVjc3y2W", "joosbeen"); 
